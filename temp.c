@@ -6,7 +6,7 @@ int main()
   float b;
   char c;
 printf("temp file");
- printf("a:%d\n b:%f\n c:%s", a,b,c);
+ printf("a:%d\n b:%f\n c:%c", a,b,c);
 return 0;
 }
 
