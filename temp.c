@@ -7,6 +7,6 @@ int main()
   char c;
 printf("temp file");
  printf("a:%d\n b:%f\n c:%s", a,b,c);
-return 0;
+return 1;
 }
 
