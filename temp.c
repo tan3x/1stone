@@ -9,9 +9,5 @@ printf("temp file");
 <<<<<<< HEAD
  printf("a:%d\n b:%f\n c:%c", a,b,c);
 return 0;
-=======
- printf("a:%d\n b:%f\n c:%s", a,b,c);
-return 0;
-
 }
 
