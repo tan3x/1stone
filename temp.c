@@ -1,4 +1,4 @@
-1#include<stdio.h>
+#include<stdio.h>
 
 int main()
 {
@@ -6,7 +6,12 @@ int main()
   float b=5.1;
   char c='c';
 printf("temp file");
+<<<<<<< HEAD
  printf("a:%d\n b:%f\n c:%c", a,b,c);
 return 0;
+=======
+ printf("a:%d\n b:%f\n c:%s", a,b,c);
+return 0;
+
 }
 
