@@ -1,14 +1,51 @@
-<body>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JStest</title>
+</head>
+	<script type="text/javascript"> 
 
-<h2>first js</h2>
+	alert("this is a JStest")
 
-<button type="button">
+	var x= 1, y= 2, z= 3;
+	var sum = x+y, min=x-y, multi=x*y, div= x/y ;
+	var countries = ["Germany", "France", "Spain", "Italy"];
 
-onclick=document.getElementById('demo').innerHTML=Date()">
+	document.write("Number of countries: " + countries.length + "<br/>" );
 
-Date and Time.</button>
+	
 
-<p id="demo"></p>
+	countries.sort() ;
+	
+
+		for (i=0; i< countries.length ; i++)
+		{
+			document.write(countries[i] + "<br/>" + "<br/>"); 
+		}
+
+
+
+	// countries.prototype.displayItems = function() {
+	// countries.displayItems();
+
+	document.write("First No: = " + x + "<br />Second No: = " + y + " <br />");
+
+	document.write(x + " + " + y + " = " + sum + "<br/>");
+
+	document.write(x + " - " + y + " = " + min + "<br/>");
+
+	document.write(x + " * " + y + " = " + multi + "<br/>");
+
+	document.write(x + " / " + y + " = " + div + "<br/>");
+
+
+	
+
+</script>
+
+	<body>
+
+	
 
 </body>
 </html>
