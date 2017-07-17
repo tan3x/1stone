@@ -1,16 +1,83 @@
+<!DOCTYPE html>
 <html>
-   <body>
-      
-      <script type="text/javascript">
-         <!--
-            var age = 20;
-         
-            if( age > 18 ){
-               document.write("<b>Qualifies for driving</b>");
-            }
-         //-->
-      </script>
-      
-      <p>Set the variable to different value and then try...</p>
-   </body>
+<head>
+	<title>JStest</title>
+</head>
+	 
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"> </script> 
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"> </script> 
+	<script type="text/javascript"> 
+
+
+	alert("this is a JStest")
+
+	var x= 1, y= 2, z= 3, a, b=9 ;
+	var sum = x+y, min=x-y, multi=x*y, div= x/y ;
+	var countries = ["Germany", "France", "Spain", "Italy"];
+
+	document.write("Number of countries: " + countries.length + "<br/>");
+	document.body.style.backgroundColor = "#AA8071";
+	
+
+
+	countries.sort() ;
+		_.each(countries, function(country){
+			console.info('the country is ' + country);
+		});
+
+		for (i=0; i< countries.length ; i++)
+		{
+			document.write(countries[i] + "<br/>" + "<br/>"); 
+		}
+
+		for (a=0; a< 10 ; a++ , b--)
+		{
+			document.write('a is:' + a + "<br/>"); 
+			document.write('b is:' + b + "<br/>");
+			if (b<3)
+		 {
+		 	document.write( "<br/>" + 'Conditional Value of b is:' + b + "<br/>");
+		 }
+		}
+
+		/*while(b>0)  {
+			document.write( "<br/>" + 'Last Value of b is:' + b +'  //Why doesnt stop at 5???'+ "<br/>"); 
+
+
+		} 	 // why doesnt stop at 5??? */ 
+
+		var actualtime = new Date().getHours(); // Minute,Second??? getMinute, getSecond
+			
+			document.write( "<br/>" + 'Actual Time is:' + actualtime + '   //Minute, Second???' +  "<br/>"); 
+
+		var age = prompt("Type your age:");
+			if (age<18) 
+				alert( 'No Access');
+			else
+				alert( 'Access Granted');
+
+
+	// countries.prototype.displayItems = function() {
+	// countries.displayItems();
+
+	document.write(" <br />" + "First No: = " + x + "<br />Second No: = " + y + " <br/>");
+
+	document.write(x + " + " + y + " = " + sum + "<br/>");
+
+	document.write(x + " - " + y + " = " + min + "<br/>");
+
+	document.write(x + " * " + y + " = " + multi + "<br/>");
+
+	document.write(x + " / " + y + " = " + div + "<br/>");
+
+
+	
+
+</script>
+
+	<body>
+
+	
+
+</body>
 </html>
