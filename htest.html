@@ -3,19 +3,39 @@
 <head>
 	<title>JStest</title>
 </head>
-	 
+<body>
+	<h1 id="two"> Test file </h1> 
+	<p> message 1</p>
+	<h2 id="two"> Test file  </h2> 
+	<p> message 2</p>
+	<h3 id="two"> Test file  </h3> 
+	<p> message 3</p>
+	
+	<input type= "button" id="btnClick1" value="testbutton" />
+	<input type= "input" id="input1" value="input" />
+
 	<script src= "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"> </script> 
 	<script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"> </script> 
 	<script type="text/javascript"> 
 
 
-	alert("this is a JStest")
+	var text = document.getElementById("two").innerHTML ;
+	var message = document.getElementsByTagName("p"); // not working
+	document.getElementById("btnClick1").addEventListener("click", clicked);
 
-	var x= 1, y= 2, z= 3, a, b=9 ;
+	function clicked(){
+		alert('i was clicked');
+	}
+
+
+	alert(text)
+	// alert(message[1].innerHTML) ; ??????
+
+	var x= 1, y= 2, z= 3, a, b=9, k ;
 	var sum = x+y, min=x-y, multi=x*y, div= x/y ;
 	var countries = ["Germany", "France", "Spain", "Italy"];
 
-	document.write("Number of countries: " + countries.length + "<br/>");
+	document.write("<br/>"+"Number of countries: " + countries.length + "<br/>");
 	document.body.style.backgroundColor = "#AA8071";
 	
 
@@ -23,6 +43,7 @@
 	countries.sort() ;
 		_.each(countries, function(country){
 			console.info('the country is ' + country);
+			console.log('the country is ' + country);
 		});
 
 		for (i=0; i< countries.length ; i++)
@@ -70,14 +91,29 @@
 
 	document.write(x + " / " + y + " = " + div + "<br/>");
 
+	var value=prompt('Enter a number');
+	var newvalue;
+	function square()
+	{
+		newvalue = value*value;
+		document.write('<br/> Function is in use: <br/>'+ newvalue) ;
+	}
+		square(value);
+
+	function multiply(z,b){
+		k=z*b;
+		return k;
+	}
+		multiply(z,b);
+		document.write('<br/>' +z, b+ ' Function is in use: <br/>'+ k);
+
+		var mycookie;
+		document.cookie = mycookie=5 ; path="/Users/tanermetin/" ; // no cookie file?
+
+
 
 	
 
 </script>
-
-	<body>
-
-	
-
-</body>
+</body>	
 </html>
