@@ -25,11 +25,52 @@
 
 	function clicked(){
 		alert('i was clicked');
-	}
-
-
-	alert(text)
+	}	
 	// alert(message[1].innerHTML) ; ??????
+
+	var person = new Object() ;
+	person.fname = "Taner";
+	person.lname = "Metin";
+	person.age 	 = "26";
+	person.note1 = 78;
+	person.note2 = 89;
+	person.note3 = 99;
+
+	var  avg 
+	person.DisplayDetails = function(){
+		document.write("<br/>" + person.fname+" "+person.lname+" "+person.age);
+	}
+		person.DisplayDetails();
+
+	function getaverage(note1, note2, note3){
+		 avg = (person.note1 + person.note2+ person.note3)/ 3 ; 
+	}
+		getaverage();
+		document.write(" "+ 'Note Average:'+ avg + "<br/>") ;
+
+
+/*
+	var employee = {first: 'Taner', last:'Metin', age: '26' }
+	function Student(id, math, chemistry, biology){
+		this.ID= id;									// THIS meaning?
+		this.Mathe=math;
+		this.Chem=chemisty;
+		this.Bio=biology;
+		AVG= calcavg();
+	}
+		calcavg=function(){
+			return ( (Mathe + Chem + Bio)/3);
+		}
+	this.EmployeeDetails=function()
+	{
+		document.write(employee.first, employee.last, employee.age);
+
+	}
+		calcavg(), EmployeeDetails(); 
+
+*/
+	
+
 
 	var x= 1, y= 2, z= 3, a, b=9, k ;
 	var sum = x+y, min=x-y, multi=x*y, div= x/y ;
@@ -96,7 +137,7 @@
 	function square()
 	{
 		newvalue = value*value;
-		document.write('<br/> Function is in use: <br/>'+ newvalue) ;
+		document.write('<br/> Square Function: <br/>'+ newvalue) ;
 	}
 		square(value);
 
@@ -105,7 +146,7 @@
 		return k;
 	}
 		multiply(z,b);
-		document.write('<br/>' +z, b+ ' Function is in use: <br/>'+ k);
+		document.write('<br/>' +z, b+ 'Minus Function: <br/>'+ k);
 
 		var mycookie;
 		document.cookie = mycookie=5 ; path="/Users/tanermetin/" ; // no cookie file?
