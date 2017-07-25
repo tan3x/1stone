@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="LangApp">
+    <head>
+        <meta charset="utf-8">
+        <title>AngularTest</title>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+</head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+    <script src="app.js"> </script>
+
+    <body ng.app />
+        <h1>Angular Test</h1>
+        <input type="text" ng-model="name">
+        <textarea name="" ng-model="textarea" cols="30" rows="2"></textarea>
+        <textarea name="" ng-model="array" cols="30" rows="2"></textarea>
+        <div> input text: {{name}} </div>
+        <div> ng-bind {{name}} </div>   
+        <div> textarea: {{textarea}} </div>
+        <div ng-init="array=[{name:'PHP', ext: ' .php'}, 
+                             {name:'javasript', ext:' .js'},
+                             {name:'ruby', ext: '  .rb'},
+                             {name: 'C++', ext:' .cpp'}]">
+            {{languages}}
+                <p ng-repeat="language in array">
+                    Name: {{language.name}}
+                    Extension: {{language.ext}}<br> </p>
+        </div>
+                <div ng-controller="languages" >
+                    Your favorite language:
+                    <button ng-click='php()' >PHP</button>
+                    <button ng-click='javascript()' >Javascript</button>
+                    <button ng-click='ruby()' >Ruby</button>
+                    <button ng-click='cpp()' >C++</button>
+                    <p>Selected language: {{favlanguage}} </p>
+
+        </div>
+        <script>
+            var application = angular.module('LangApp',[]);
+                application.controller('languages',['$scope', function($scope){
+                            $scope.favlanguage = '';
+                
+                            $scope.php = function(){$scope.favlanguage = 'PHP'};
+                            $scope.javascript = function(){$scope.favlanguage = 'JavaScript'};
+                            $scope.ruby = function(){$scope.favlanguage = 'Ruby'};
+                            $scope.cpp = function(){$scope.favlanguage = 'C++'};
+                            }]);
+        </script>   
+        /* setting filters */
+
+    </body>
+    
+</html>
