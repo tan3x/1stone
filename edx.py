@@ -148,3 +148,89 @@ def polysum(n, s):
 polysum(32,30)
 
 '''
+
+
+def calcBalance(debt, annualInterestRate, monthlyPaymentRate):
+    '''
+    :param debt: total debt
+    :param annualInterestRate: annual interest rate as decimal
+    :param monthlyPaymentRate: min monthly payment rate
+    :return: balance: remaining balance with 2 decimals
+
+    '''
+    monthlyInterest = annualInterestRate / 12.0
+    totalPayment  = 0
+    i = 1
+
+    while i < 12:
+        monthlyPayment = debt * monthlyPaymentRate
+        debt = debt - monthlyPayment
+        mInterest = monthlyInterest * debt
+        balance = debt + mInterest
+        totalPayment += monthlyPayment
+
+        i += 1
+
+    print ('Remaining debt:%s' % str(balance))
+    print ('Total Payment:%s' % str(totalPayment))
+
+    return balance
+
+calcBalance(42, 0.2, 0.04)
+
+'''
+def oddTuples(aTup):
+    
+    #aTup: a tuple
+
+    #returns: tuple, every other element of aTup.
+    
+    # Your Code Here
+    bTup = ()
+
+    for i in range(0,len(aTup),1):
+        if i % 2 == 0:
+            bTup = bTup + (aTup[i],)
+    return  bTup
+
+print(oddTuples((1,2,3,4,5,'totemo','oishi')))
+'''
+'''
+def applyToEach(L, f):
+    for i in range(len(L)):
+        L[i] = f(L[i])
+    print 'Function applied to each:', str(L)
+
+def times5(x):
+    return x*5
+def absolute(x):
+    return abs(x)
+def increment(x):
+    return x+1
+def square(x):
+    return x**2
+
+list = [1, -4, 8, -9]
+applyToEach(list,square)
+
+def applyEachTo(L,a):
+    result=[]
+    for i in range(len(L)):
+        result.append(L[i](a))
+    print 'Functions applied on variable', result
+    return result
+
+def absolut(x):
+    return abs(x)
+def incuat(x):
+    return x+1
+def squat(x):
+    return x**2
+def halve(x):
+    return x/2
+
+list2 = [absolut, incuat, squat, halve]
+applyEachTo(list2, -3)
+
+'''
+
