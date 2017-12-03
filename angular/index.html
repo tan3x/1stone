@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"> </script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 
     <script src="/opt/tests/angular/app.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route-segment/1.5.1/angular-route-segment.min.js"></script>
     <script src="/opt/tests/angular/incfile.html"> </script>
     
-  <body ng-app="LangApp">    <!-- Defining what part of the HTML contains Angular JS -->
+    <body ng-app="LangApp">
+        <h1>Angular Test</h1>
         
-        Input: <input type="text" ng-model="name" placeholder="ng-model" >
-        Input2: <input type="text" ng-model="name2" placeholder="ng-model 2" ></br>
-        Price: <input type="text" ng-model="price"></br>
-        <textarea name="area1" ng-model="textarea" cols="30" rows="2"></textarea></br>
+        
+        Input: <input type="text" ng-model="name">
+        Price: <input type="text" ng-model="price">
+        <textarea name="area1" ng-model="textarea" cols="30" rows="2"></textarea>
         <textarea name="area2" ng-model="array" cols="30" rows="2"></textarea>
-        </br>
-
-        ng-model: {{name}}   </br>
-        ng-model2: {{name2}} </br>
+        
+        Text: {{name}}   
+        ng-bind {{name}}   </br>
         Textarea: {{textarea}} </br>
         Price:{{price | currency:"€":2}} </br>   <!-- filtering -->
         Lowercase: {{price |lowercase }} </br> </br>
@@ -43,11 +43,11 @@
                              {name: 'C++', ext:' .cpp'}]">
             
                 <p ng-repeat="language in array">
-                    Name: {{language.name}}</br>
+                    Name: {{language.name}}
                     Extension: {{language.ext}}<br> </p>
         </div>
                 <!-- controller -->
-                <div ng-controller="languages" > <!--Telling Angular JSwhat controller to use -->
+                <div ng-controller="languages" >
                     Favorite language:
                     <button ng-click='php()'> PHP </button>
                     <button ng-click='javascript()'> Javascript </button>
