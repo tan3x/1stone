@@ -16,16 +16,33 @@ print(count)
 '''
 
 '''
-s='abcdefefef'
-sLongest = []
-for i in range(len(s) - 1):
-    if s[i] < s[i + 1]:
-        sLongest.append(s[i])
+s='jhvyrgxyzgszkkl'
+
+# Initialize theMatch to hold first character of s
+bestMatch = s[0]
+
+# Initialize testString to first character of s
+testString = s[0]
+
+# We are going to start at s[1] since we
+# initialized value of testString to s[0]
+for i in range(1, len(s)):
+
+    # My troubleshooting print statements. Comment out before submitting.
+    # print "s[i]: " + s[i]
+    # print "bestMatch: " + bestMatch
+
+    if s[i] > s[i - 1]:
+        testString = testString + s[i]
     else:
-        break
+        testString = s[i]
 
+    # Test to see if length of testString is greater than bestMatch
+    if len(testString) > len(bestMatch):
+        # if true, set bestMatch to value of testString
+        bestMatch = testString
 
-print('Longest substring in alphabetical order is: %s' % ''.join(sLongest))
+print "Longest substring in alphabetical order is: " + bestMatch
 '''
 
 '''
@@ -58,14 +75,13 @@ while choice != 'c':
 print ('Game over. Your number was: ' + str(guess) + ".")
 
 '''
-
+'''
 def iterPower(base, exp): #iterative: withloop
-    '''
-    base: int or float.
-    exp: int >= 0
-
-    returns: int or float, base^exp
-    '''
+    
+    #base: int or float.
+    #exp: int >= 0
+    #returns: int or float, base^exp
+    
     n=1
     result=1
 
@@ -74,6 +90,7 @@ def iterPower(base, exp): #iterative: withloop
         result = result*base
 
     return result
+'''
 
 '''
 def recurPower(base, exp): #recursive: calling function again
@@ -102,14 +119,14 @@ def gcdRecur(x,y):
 print (gcdRecur(8,2))
 '''
 
-def isIn(char, aStr):
-    '''
-        char: a single character
-        aStr: an alphabetized string
-
-        returns: True if char is in aStr; False otherwise
-        '''
 '''
+def isIn(char, aStr):
+    
+   #     char: a single character
+   #     aStr: an alphabetized string
+   #     returns: True if char is in aStr; False otherwise
+        
+
     if aStr == '' :  # Check for empty string
         return False
     s=sorted(aStr)
@@ -127,6 +144,7 @@ def isIn(char, aStr):
     
 print(isIn('x', 'berlix'))
 '''
+
 '''
 def polysum(n, s):
     
@@ -234,3 +252,45 @@ applyEachTo(list2, -3)
 
 '''
 
+#DICTIONARY
+'''
+animals = { 'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati'], 'd': [ 'donkey', 'dog', 'dingo']}
+
+animals['e'] = ['pajaro']
+animals['e'].append('caballo')
+
+def how_many(aDict):
+
+    #aDict: A dictionary, where all the values are lists.
+
+    #returns: int, how many values are in the dictionary.
+
+    summ = 0
+
+    for i in aDict.values():
+        summ = sum(map(len,aDict.values()))
+
+    return summ
+
+how_many(animals)
+'''
+
+'''
+
+def biggest(aDict):
+    
+       #aDict: A dictionary, where all the values are lists.
+       #returns: The key with the largest number of values associated with it
+       
+
+    result = None
+    theBiggest = 0
+    for key in aDict.keys():
+        if len(aDict[key]) >= theBiggest:
+            result = key
+            theBiggest = len(aDict[key])
+    return result
+
+biggest(animals)
+
+'''
