@@ -294,3 +294,44 @@ def biggest(aDict):
 biggest(animals)
 
 '''
+'''
+file_data=[]
+file_name='test'
+try:
+    file = open(file_name, 'r')
+    file.close()
+except ZeroDivisionError:
+    print ('zero division')
+
+
+except IOError: #IOError meaning?
+    raise ValueError('can not open file')
+
+else:
+    for new in file:
+        data.append(1,2,3)
+'''
+def fancy_divide(numbers, index):
+    try:
+        try:
+            denom = numbers[index]
+            for i in range(len(numbers)):
+                numbers[i] /= denom
+        except IndexError:
+            fancy_divide(numbers, len(numbers) - 1)
+        else:
+            print("1")
+        finally:
+            print("0")
+    except ZeroDivisionError:
+        print("-2")
+
+#define the simple_divide function here
+def simple_divide(item, denom):
+    assert  denom != 3
+    try:
+        return item / denom
+    except ZeroDivisionError:
+       print (-1)
+
+simple_divide(0,3)
