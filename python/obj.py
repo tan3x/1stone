@@ -9,7 +9,7 @@ class Clock(object):
 
 clock = Clock('11:12')
 clock.time = '11:11'
-clock.print_time()
+#clock.print_time()
 
 
 class intSet(object):
@@ -62,7 +62,6 @@ class intSet(object):
         return intersect_set
 
     def __len__(self):
-        print  len(self.vals)
         return len(self.vals)
 
 s1 = intSet()
@@ -93,7 +92,7 @@ class Animal(object):
     def setName(self, newName):
         self.name = newName
     def __str__(self):
-        return "Animal:" +str(self.name)+"Age:"+str(self.age)
+        return "Animal:" +str(self.name)+" | Age:"+str(self.age)
 
 
 
@@ -131,22 +130,98 @@ class Student(Human):
         elif 0.25<r<0.5: print 'eat'
         elif 0.5<r<0.75: print 'work'
         else : print 'sleep'
+    def __str__(self):
+        return "Animal:" +str(self.name)+" | Age:"+str(self.age) + "| Major:" + str(self.major)
+
 
 
 kater = Cat(Animal(12))
 katze = Cat(Animal(5))
 kater.setName('boncuk')
-kater.speak()
+#kater.speak()
 Dog = Animal(12)
 Dog.setName('yaman')
 
 h1 = Human(12, 'human1')
 h2 = Human(11, 'human2')
-print h1.compareAge(h2)
+#print h1.compareAge(h2)
 
-s1 = Student('s1', 20, 'CE')
+stu1 = Student('Student1', 20, 'CE')
+print stu1
 
-print s1
+
+class Spell(object):
+    def __init__(self, incantation, name):
+        self.name = name
+        self.incantation = incantation
+
+    def __str__(self):
+        return self.name + ' ' + self.incantation + '\n' + self.getDescription()
+
+    def getDescription(self):
+        return 'No description'
+
+    def execute(self):
+        print(self.incantation)
+
+
+class Accion(Spell):
+    def __init__(self):
+        Spell.__init__(self, 'Accio', 'Summoning Charm')
+
+
+class Confundo(Spell):
+    def __init__(self):
+        Spell.__init__(self, 'Confundo', 'Confundus Charm')
+
+    def getDescription(self):
+        return 'Causes the victim to become confused and befuddled.'
+
+
+def studySpell(spell):
+    print(spell)
+
+
+spell = Accion()
+#spell.execute()
+#studySpell(spell)
+#studySpell(Confundo())
+
+import datetime
+
+class Person(object):
+    def __init__(self):
+        self.name = name
+        self.birthday = None
+        self.lastName = name.split(' ')[-1]
+    def getLastName(self):
+        return self.lastName
+    def __str__(self):
+        return self.name
+
+
+def genPrimes():
+    prime_list = []
+    x = 1
+
+    while True:
+        x += 1
+        for p in prime_list:
+            if (x % p) == 0:
+                break
+        else:
+            prime_list.append(x)
+            yield x
+
+oo = genPrimes()
+
+
+print oo.next()
+
+
+
+
+
 
 
 
