@@ -152,30 +152,55 @@ import numpy
 #     print s_list
 #     print s_list[0::2] + ' ' + s_list[1::2]
 
+#
+#with open("./sil/test.txt") as f:
+#     for line in f:
+#         print line
+#
+# def solve(grade):
+#
+#     for i in grade:
+#         if i >= 38:
+#             if i % 5 > 2:
+#                 i += 5 - i % 5
+#         print i,
+#
+# n = int(raw_input('number of students:').strip())
+#
+# grades = []
+# for i in xrange(n):
+#     grades.append(int(raw_input().strip()))
+#
+# solve(grades)
 
-def solve(grade):
+# def printarg(*args):
+#     print args
+# alist = [1,2,3]
+# printarg (alist)
+#
+# def shift(a, d):
+#     return a[d:] + a[:d]
+#
+# if __name__ == "__main__":
+#     n, d = raw_input().strip().split(' ')
+#     n, d = [int(n), int(d)]
+#     a = map(int, raw_input().strip().split(' '))
+#     result = shift(a, d)
+#     print " ".join(map(str, result))
+
+# from collections import Counter, defaultdict
+#
+# counter = defaultdict(int, Counter([raw_input() for _ in range(input())]))
+#
+# for _ in range(input()):
+#     print counter[raw_input()]
 
 
-
-    for i in grade:
-        if i >= 38:
-            if i % 5 > 2:
-                i += 5 - i % 5
-        print i,
-
-
-
-
-n = int(raw_input('number of students:').strip())
-
-grades = []
-for i in xrange(n):
-    grades.append(int(raw_input().strip()))
-
-
-solve(grades)
-
-
+# reversed array
+#print list(reversed(arr))
+#print(" ".join(map(str, arr[::-1])))
+# for i in reversed(arr):
+#     print i,
 
 
 
