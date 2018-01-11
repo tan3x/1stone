@@ -41,6 +41,7 @@ import numpy
 #     row = []
 #     for column in xrange(6):
 #         row.append(random.randint(1,10))
+#
 #         a.append(row)
 #
 # def glassWatch(arr):
@@ -51,10 +52,11 @@ import numpy
 #
 #             sumTemp = sum(arr[x-1][y-1:y+2]+ [arr[x][y]]+arr[x+1][y-1:y+2])
 #             sum_list.append(sumTemp)
-#
+#     print max(sum_list)
 #     return max(sum_list)
 #
-#
+# glassWatch(a)
+
 # class Person:
 #     def __init__(self, initialAge):
 #         # Add some more code to run some checks on initialAge
@@ -203,19 +205,192 @@ import numpy
 #     print i,
 
 
+# #number of entries in phonebook
+# n = int(input().split())
+# phoneBook = {}
+#
+# #assign in phoneBook
+# for i in range(n):
+#     name, num = input().strip().split(' ')
+#     phoneBook[name] = num
+#
+# #query phoneBook while there is input, exit when EOF
+# while(True):
+#     try:
+#         qName = input().strip()
+#         if qName in phoneBook:
+#             print('{}={}'.format(qName, phoneBook[qName]))
+#         else:
+#             print('Not found')
+#     except EOFError:
+#         break
 
 
+# dictionary comprehension
+
+# import sys
+# n = input()
+# name_numbers = [raw_input().split() for _ in range(n)]
+# phone_book = {k: v for k,v in name_numbers}
+# ls = map(lambda x: x.strip(),sys.stdin.readlines())
+# for name in ls:
+#     if name in phone_book:
+#         print('%s=%s' % (name, phone_book[name]))
+#     else:
+#         print('Not found')
 
 
+# recursive factorial
+
+# def factorial(n):
+#     # Complete this function
+#     result = 1
+#     if n <1:
+#         return 1
+#     else:
+#         return (n * factorial(n-1))
+#
+# if __name__ == "__main__":
+#     n = int(raw_input().strip())
+#     result = factorial(n)
+#     print result
+#
+# factorial(3)
 
 
+# binary converter
+#
+# n1 = int(raw_input().strip())
+#
+# n1_b = "{0:b}".format(n1)
+# cnt = 0
+# for _ in n1_b:
+#     if _ == '1':
+#         cnt = cnt + 1
+#
+# print len(max(n1_b.split('0')))
+
+#!/bin/python
+
+# HourGlass 2
+#
+# arr = []
+# arr_temp = []
+# for arr_i in xrange(6):
+#
+#     arr_temp.append(random.randint(1,10))
+#     #arr_temp = map(int,raw_input().strip().split(' '))
+#     arr.append(arr_temp)
+#
+# res = []
+#
+# for x in range(0, 4):
+#     for y in range(0, 4):
+#         s = sum(arr[x][y:y+3]) + arr[x+1][y+1] + sum(arr[x+2][y:y+3])
+#         res.append(s)
+#
+# print(max(res))
 
 
+#
+# class Person:
+#     def __init__(self, firstName, lastName, idNumber):
+#         self.firstName = firstName
+#         self.lastName = lastName
+#         self.idNumber = idNumber
+#
+#     def printPerson(self):
+#         print "Name:", self.lastName + "," + self.firstName
+#         print "ID:", self.idNumber
+#
+# class Student(Person):
+#
+#         # Class Constructor
+#     def __init__(self, firstName, lastName, idNumber, scores):
+#         self.firstName = firstName
+#         self.lastName = lastName
+#         self.idNumber = idNumber
+#         self.scores = scores
+#
+#     def calculate(self):
+#         a=sum(self.scores)/len(self.scores)
+#         if a >= 90:
+#             return 'O'
+#         elif 90>a>=80:
+#             return 'E'
+#         elif 80>a>=70:
+#             return 'A'
+#         elif 70>a>=55:
+#             return 'P'
+#         elif 55>a>=40:
+#             return 'D'
+#         else:
+#             return 'T'
+#
+# line = raw_input().split()
+# firstName = line[0]
+# lastName = line[1]
+# idNum = line[2]
+# numScores = int(raw_input())  # not needed for Python
+# scores = map(int, raw_input().split())
+# s = Student(firstName, lastName, idNum,scores)
+# s.printPerson()
+# print "Grade: " , s.calculate()
 
 
+# from abc import ABCMeta, abstractmethod
+# class Book:
+#     __metaclass__ = ABCMeta
+#     def __init__(self,title,author):
+#         self.title=title
+#         self.author=author
+#     @abstractmethod
+#     def display():
+#         pass
+#
+# class MyBook(Book):
+#     def __init__(self,title, author, price ):
+#         self.title = title
+#         self.author = author
+#         self.price = price
+#     def display(self):
+#         print'Title: ' , title
+#         print'Author: ', author
+#         print'Price: ', price
+#
+# title = raw_input()
+# author = raw_input()
+# price = int(raw_input())
+# new_novel = MyBook(title, author, price)
+# new_novel.display()
 
-
-
+# class Difference:
+#     def __init__(self, a):
+#         self.__elements = a
+#
+#     def computeDifference(self):
+#         '''
+#         gets the maximum difference between any 2 array elements
+#         :return:
+#         '''
+#
+#         #self.maximumDifference = max(a) - min(a)
+#         maximum = 0
+#         for i in range(len(self.__elements)):
+#             for j in range(len(self.__elements)):
+#                 absolute = abs(self.__elements[i] - self.__elements[j])
+#                 if absolute > maximum:
+#                     maximum = absolute
+#
+#         self.maximumDifference = maximum
+#
+# _ = raw_input()
+# a = [int(e) for e in raw_input().split(' ')]
+#
+# d = Difference(a)
+# d.computeDifference()
+#
+# print d.maximumDifference
 
 
 
