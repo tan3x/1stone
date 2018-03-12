@@ -337,7 +337,7 @@ import numpy
 # s.printPerson()
 # print "Grade: " , s.calculate()
 
-
+#Day 13
 # from abc import ABCMeta, abstractmethod
 # class Book:
 #     __metaclass__ = ABCMeta
@@ -364,6 +364,7 @@ import numpy
 # new_novel = MyBook(title, author, price)
 # new_novel.display()
 
+#Day 14
 # class Difference:
 #     def __init__(self, a):
 #         self.__elements = a
@@ -392,7 +393,65 @@ import numpy
 #
 # print d.maximumDifference
 
+#linked list https://www.youtube.com/watch?v=njTh_OwMljA
+
+# class Node:
+#     def __init__(self,data):
+#         self.data = data #contains data
+#         self.next = None #contains the reference to the next node
+#
+# class Solution:
+#     def display(self,head):
+#         current = head
+#         while current:
+#             print current.data,
+#             current = current.next
+#
+#     def insert(self, head, data):
+#         if head is None:
+#             head = Node(data)
+#             self.tail = head
+#         else:
+#             node = Node(data)
+#             self.tail.next = node
+#             self.tail = node
+#         return head
+#
+# mylist= Solution()
+# T=int(input())
+# head=None
+# for i in range(T):
+#     data=int(input())
+#     head=mylist.insert(head,data)
+# mylist.display(head);
+# #
+# S = raw_input().strip()
+#
+# try:
+#     print int(S)
+#
+# except ValueError:
+#     print "Bad String"
 
 
+#exception
+#
+# class Calculator:
+#     def power(self, n, p):
+#         if n < 0 or p < 0:
+#             raise Exception("n and p should be non-negative")
+#         return pow(n, p)
+#
+#
+# myCalculator = Calculator()
+#
+# T = int(raw_input())
+# for i in range(T):
+#     n, p = map(int, raw_input().split())
+#     try:
+#         ans = myCalculator.power(n, p)
+#         print ans
+#     except Exception, e:
+#         print e
 
 
