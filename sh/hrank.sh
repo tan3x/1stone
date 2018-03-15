@@ -44,7 +44,7 @@ echo "se significa" $sign
 #read var2
 
 
-sum=$(( var1+var2 ))
+summ=$(( var1+var2 ))
 sub=$(( var1-var2 ))
 mult=$(( var1*var2 ))
 div=$(( var1/1 ))
@@ -56,8 +56,9 @@ div=$(( var1/1 ))
 
 boo1=$true
 boo2=$false
-var3=3
-while [ "$var3" -lt 3 ]
+var3=0
+
+while [ "$var3" -ge 5 ]
 do 
 	var4=$var3
 	echo  $var4
@@ -66,7 +67,66 @@ do
 		do
 			echo "le vent nous portera"
 			echo $boo1
-		done 
+		done
+	j
 done 
+
+while [ $var3 -lt 10 ]
+do 
+	echo $var3 
+	if [ $var3 -eq 5 ]
+		then 
+			break
+	fi
+	var3=`expr $var3 + 1`
+done 
+
+NUMS="15 25 35 45 55 65 75"
+
+for NUM in $NUMS
+	do 
+		q=`expr $NUM % 3`
+		if [ $q -eq 0 ]
+		then
+			echo -e "driple\n"
+			continue
+		fi
+		echo "non-driple"
+	done 
+
+# filename=sw_result.txt
+# vi -c  $filename <<EndOfCommands
+# i
+# Swift results to be shown
+# ^[
+# ZZ
+# EndOfCommands
+
+last=$?
+echo "captured value by last command: $last"
+
+swift_1() {
+	echo "swift_1 is active"
+	echo "$1 $2"
+	# stuff
+	
+}
+
+swift_2() {
+	echo "swift_2 is active"
+	# stuff
+	swift_1 arg1 arg2
+}
+swift_2
+
+
+
+
+
+
+
+
+
+
 
 
