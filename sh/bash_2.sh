@@ -18,3 +18,6 @@ cat food | sed -e 's/^[[:alpha:]][[:alpha:]][[:alpha:]]/(&)/g' > fooda.txt
 cat food | sed -e 's/[[:space:]]/(&)/g' > foods.txt
 cat food | sed -e 's/[[:space:]]\{2\}/(&)/g'  > food3.txt
 cat food | sed -e 's/[[:space:]]/ -gap- /g'  > food2.txt
+
+
+
