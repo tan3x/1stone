@@ -98,8 +98,11 @@
 # uniq -u dupl  #display lines that are not repeated 
 
 
-paste -s food 
-paste -s -d '\t\t\n' food 
+# paste -s food 
+# paste -s -d '\t\t\n' food 
+
+ifconfig ens3 | head -2 | tail -1 | awk '{print $2}' | cut -c 5-
+
 
 
 
