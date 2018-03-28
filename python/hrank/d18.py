@@ -21,10 +21,10 @@ class Solution:
 		self.length=0
 
 	def pushCharacter(self, letter):
-		self.stack.insert(0, letter)
+		self.stack.append(letter)
 
 	def enqueueCharacter(self, ch):
-		self.queue.append(ch)
+		self.queue.insert(0, ch)
 
 	def popCharacter(self):
 		return self.stack.pop()
@@ -48,6 +48,16 @@ pop the top character from stack
 dequeue the first character from queue
 compare both the characters
 ''' 
+
+print  obj.stack 
+obj.popCharacter()
+print obj.stack
+print "----"
+print  obj.queue
+obj.dequeueCharacter()
+print  obj.queue
+
+
 for i in range(l / 2):
     if obj.popCharacter()!=obj.dequeueCharacter():
         isPalindrome=False
