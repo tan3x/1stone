@@ -1,10 +1,9 @@
+import sys
+
 class Node:
     def __init__(self,data):
         self.right=self.left=None
         self.data = data
-
-
-
 class Solution:
     def insert(self,root,data):
         if root==None:
@@ -19,18 +18,30 @@ class Solution:
         return root
 
 
-    def getHeight(self,root):
 
-        if root is None or (root.left is None and root.right is None):
-            return 0
-        else:
-            return max(self.getHeight(root.left),self.getHeight(root.right))+1
+    def levelOrder(self,root):
+        if root is None:
+            return
+        queue =[]
+        queue.append(root)
+        while(len(queue) > 0):
+            print queue[0].data,
+            node = queue.pop(0)
+
+
+            if node.left is not None:
+                queue.append(node.left)
+
+
+            if node.right is not None:
+                queue.append(node.right)
+
 
 T=int(raw_input())
 myTree=Solution()
 root=None
+
 for i in range(T):
     data=int(raw_input())
     root=myTree.insert(root,data)
-height=myTree.getHeight(root)
-print 'Height of the binary tree:' , height 
+myTree.levelOrder(root)
