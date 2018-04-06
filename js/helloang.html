@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   
+    <!-- app.js is not working  -->
+    
+    <script>
+            var app = angular.module('helloapp', []);
+            angular.module('helloapp', []).controller('hellocontroller', function ($scope,$location,$timeout){
+                $scope.fname = "Adam";
+                $scope.lname = "Smith";
+                $scope.title = "Hello Angular";
+                $scope.color = "Blue";
+                $scope.myarray= [ 'element1', 'element2']; // ???
+                $scope.myUrl = $location.absUrl(); // services timeout, location
+                function tout(){
+                $timeout(function(){
+                    $scope.fname = "Will";
+                            }, 1000);
+                $timeout(function(){
+                    $scope.fname = "John";
+                            }, 2000);
+                }
+
+                $scope.fullname = function(){
+                    return $scope.fname +" "+  $scope.lname ; }
+                
+                $scope.names = [  {name: 'Jack', country:'AU'},
+                                  {name: 'John', country:'UK'},
+                                  {name: 'Jung', country:'JP'},
+                                  {name: 'Kyle', country:'USA'},
+                                  {name: 'Lui' , country:'CHI'}];
+             });
+
+        </script>
+        
+    <body>
+    
+        <div ng-app = "helloapp"  ng-controller="hellocontroller" >
+            <h1> {{title}} </h1>
+            First Name =<input type = "text" ng-model = "fname" placeholder="First name"> </br>
+            Last Name =<input type = "text" ng-model = "lname" placeholder="Last name"> </br>
+            Age = <input type = "text" ng-model = "age" placeholder="Write your age"> </br>
+            Full Name = {{fullname()|uppercase}}  </br> 
+            Actual dir: <b>{{myUrl}}</b></br>
+            {{color}} </br></br>
+            
+            
+
+           
+        <p><input type = "text" ng-model = "test " placeholder = "Enter a filter"> </p> 
+           <li ng-repeat = "app in names | filter: test" >    
+                   {{ app.name +", "+ app.country}}
+                </li> </br>
+
+        </div>
+        
+
+
+        <script src= 'app.js'> </script> 
+        <script>    
+           var dirApp = angular.module('directive-app', []);
+           dirapp.directive('student', function(){
+            var dirApp = {},
+            dirApp.restrict = 'E';
+            dirApp.template = "Student" + {{student.name}} + {{student.rollno}} ;
+           })
+         
+        </script>
+        <div class= 'my-first-directive'> </div>
+
+    </body>
+</html>

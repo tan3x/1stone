@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>AngularTest2</title> 
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+       <script src =  "app.js" > </script>  <!-- external linking  -->
+</head>
+
+<body>
+
+<p>Click the button to display todays day of the week.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var d = new Date();
+    var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"];
+    var n = weekday[d.getDay()];
+   document.getElementById("demo").innerHTML = n;
+   
+}
+</script>
+
+</body>
+</html>
+>

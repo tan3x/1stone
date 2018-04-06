@@ -1,0 +1,165 @@
+<!DOCTYPE html >
+<head>	
+	
+	<body onmouseout="mouseoutNotify()">
+	 <h1> Javascript Playground </h1>
+	  <div id="contentID"> Division Content </div>
+	<ul>
+		<li class = 'className'> Content 1</li>
+		<li class = 'className'> Content 2</li>
+	</ul>
+		<input type = "text" onmouseover = 'hoverNotify()' 
+				onclick = 'clickNotify()' onkeydown='keydownNotify()' placeholder = 'get mouse over'>
+		
+	
+		<script>	
+			var x = 1.5, y = 0.5, a, i, j;
+			var div = document.getElementsByName('div');
+			var array1 = [1,5,3];
+			var array2 = [4,5,6];
+			var array3 = array1.concat(array2);
+			var array4 = array3.sort(sortArr);
+			var objName = { 
+				obj1: 'h', 
+				obj2: 'e',
+				obj3: 'y',
+				func: function(){
+					return this.obj1+this.obj2+this.obj3 ;
+								}
+						  };
+			console.log(objName);
+			console.log(array4);
+				// var prnumber = prompt('Type a number');
+			console.dir(div);
+
+				function sortArr(m,n){
+					return m-n; 
+				}
+			console.time('time check');
+				
+				function myfnc1(){
+					a=x-y ; 
+				}
+				function myfnc2(){
+					a=x+y ; 
+				}
+			console.log(a); //??
+			console.timeEnd('time check');
+
+				var c1 = document.getElementsByClassName('className');
+				
+				c1[0].style.background = 'red' ;
+				var c2 = document.querySelectorAll('div'); // practic way
+				console.log(c2[0].innerText);
+				var b1 = document.createElement('div'); // Creating a Div on the fly
+				var b2 = document.createTextNode('created Child text node');
+					b1.appendChild(b2);
+					document.body.appendChild(b2);
+				var d = document.getElementById('contentID').innerHTML;
+				console.log(d)
+
+			myfnc1();
+			alert(a);
+			myfnc2();
+			alert(a);
+
+				i=0;
+			while(true){
+				if(i==9) {
+					break;}
+				i++;
+				console.log(i);
+						  }
+			do { 
+				console.log('do/while')	
+			   }      while(i>10) ;
+
+			   j=0;
+			for (j in array1) {
+					console.log(array1[j]);
+							  }
+				
+
+			function hoverNotify(){
+				console.log('Mouse Over')
+			}
+			function clickNotify(){
+				console.log('Mouse Click')
+			}
+			function keydownNotify(){
+				console.log('Key Down')
+			}
+			function mouseoutNotify(){
+				console.log('Mouse is out')
+			}
+
+		</script>
+
+	<div id = "one" onclick = ''><br> Division 2 </div>
+		<script>
+			function numberSum(x,y){
+				
+				this.x = x;					
+				this.y = y;
+				this.sum = function(){
+				  return this.x +this.y ;
+										}		
+									}
+			var myNums = new numberSum(3,4);  // myNums is an object now
+				console.log('Sum is ' + myNums.sum());
+
+			function squareArea(x2){
+				this.side = x2 ;
+				this.area = new function(){
+						return this.x2 * this.x2 ; 
+				}
+			}
+
+			function squareRectangle(x2,y2){
+				this.side1 = x2 ;
+				this.side2 = y2 ;
+				this.area = new function(){
+						return this.x2 * this.y2 ; 
+				}
+			}
+
+			function perimeterofSquare(){
+
+				this.side = x;
+				this.perimeter = function (){
+					return 4* this.side ;
+				}
+			}
+
+			var square = new squareArea(5); //PROTOTYPE 
+			
+			squareArea.prototype = new perimeterofSquare(10); //INHERITENCE
+			console.log(square.perimeter());
+
+				// console.log(square.area()); ???
+
+				function bookFunction(numberofbooks){ 
+					//private property&method
+					bookprice = 50 ;
+					totalPrice = function(){
+						return bookprice * numberofbooks ;
+					};
+
+					//public
+					this.fill = function(){
+						this.price = totalPrice();
+						return 'Total price of books is ' + this.price ;
+					}
+				}
+					var bk = new bookFunction(5);
+					console.log(bk.fill());
+					console.log(bk.totalPrice());
+					
+				
+
+		</script>
+	
+
+	</body>
+
+</head>
