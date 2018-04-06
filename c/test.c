@@ -132,9 +132,6 @@ void swap(int *s1, int *s2){
 p = arr ; 
         printf("Array values are:[%d,%d,%d,%d,%d]\n",*(p+0),*(p+1),*(p+2),*(p+3),*(p+4));
 
-
-
-
         }
     
 

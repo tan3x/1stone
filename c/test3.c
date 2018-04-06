@@ -29,7 +29,7 @@ int main(){
     b = 20;
    printf(" sddsdf %d\n",a++);
    printf(" sddsdf %d\n",a++);
-printf(" sddsdf %d\n",a++);
+   printf(" sddsdf %d\n",a++);
 
 
     var3 = &var1;
