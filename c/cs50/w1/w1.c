@@ -28,5 +28,20 @@ int main(void)
         printf("#\n");
     }
 
+     int m = get_int("matrix dimension:");
+    //prompt for a positive number
+    {
+    while( m <= 0)
+        m = get_int("enter positive integer:");
+    }
+
+    for(int i = 0; i < m ; i++) //rows
+    {
+        for(int j = 0; j < m ; j++) //coloumns
+        {
+            printf("#");
+        }
+        printf("#\n");
+    }
 
 }
