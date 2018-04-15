@@ -8,13 +8,36 @@
 
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
+int duration(string fraction)
 {
-    //TODO
-   int x = atoi(&fraction[0]);
-   int y = atoi(&fraction[1]);
-   int dura = (8/y)*x;
-   printf("duration: %i\n %s", dura, fraction);
-   return dura;
+    if(fraction[0] == '1')
+    {
+        if(fraction[2] == '8')
+        {
+            return 1;
+        }
+        else if(fraction[2] == '4')
+        {
+            return 2;
+        }
+        else if(fraction[2] == '2')
+        {
+            return 4;
+        }
+        else if(fraction[2] == '1')
+        {
+            return 8;
+        }
+    }
+    else if(fraction[0] == '3' && fraction[2] == '8')
+    {
+        return 3;
+    }
+    else
+    {
+        return 0;
+    }
+    return 0;
 }
 
 // Calculates frequency (in Hz) of a note
