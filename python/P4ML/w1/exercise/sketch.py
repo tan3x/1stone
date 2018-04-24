@@ -8,7 +8,6 @@ n0 = N[0].strip('\'')
 n1 = N[1]
 n2 = N[2].strip(' \'')
 decision = 'neutral'
-print n2
 
 if n0 == 'yes':
     if ( n1 < 29.5) :
