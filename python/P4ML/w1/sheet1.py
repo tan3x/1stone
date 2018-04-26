@@ -14,8 +14,8 @@
 
 # In[1]:
 
-GROUPNAME = ""
-COLLABORATORS = "Taner Metin"
+GROUPNAME = "130"
+COLLABORATORS = "Taner Metin, Juhi Pradeep Mehta"
 
 
 # ---
@@ -33,7 +33,7 @@ COLLABORATORS = "Taner Metin"
 # * Create a function that takes as input a tuple containing values for attributes (smoker,age,diet), and computes the output of the decision tree. Should return `"less"` or `"more"`.
 # * Test your function on the tuple `('yes', 31, 'good')`,
 
-# In[47]:
+# In[2]:
 
 def decision(x):
     # >>>>> YOUR CODE HERE
@@ -59,7 +59,7 @@ def decision(x):
     # <<<<< END YOUR CODE
 
 
-# In[48]:
+# In[3]:
 
 x = ('yes', 32, 'good')
 assert decision(x) == 'more'
@@ -72,7 +72,7 @@ assert decision(x) == 'more'
 # * Read the file automatically using the methods introduced during the lecture.
 # * Represent the dataset as a list of tuples.
 
-# In[103]:
+# In[4]:
 
 
 def gettest():
@@ -82,7 +82,6 @@ def gettest():
         global count
         count = 0
         for line in ftest:
-            print line
             count += 1 
             L.extend([x for x in str.split(line[:-1], ',')])
     print "number of lists:", count
@@ -97,7 +96,7 @@ def gettest():
     # <<<<< END YOUR CODE
 
 
-# In[113]:
+# In[5]:
 
 gettest()
 
@@ -106,27 +105,30 @@ gettest()
 # 
 # * Apply the decision tree to all points in the dataset, and return the percentage of them that are classified as "more".
 
-# In[179]:
+# In[6]:
 
 def evaluate_testset():
     # >>>>> YOUR CODE HERE
     mores = 0
+    DT = []
     for i in range(count):
-        print decision(subList[i])
+        DT.append(decision(subList[i]))
         if decision(subList[i])== 'more':
             mores = mores + 1
         if len(subList[i]) != 3:
             raise NotImplementedError("Given data is not convenient.")
-     
-    print "Health risk for the given dataset:%{}" .format((mores * 100)/count)
+    ratio = (mores * 100)/count
     
+    return DT , ratio
     
     # <<<<< END YOUR CODE
 
 
-# In[180]:
+# In[7]:
 
-evaluate_testset()
+res = []
+res, ratio = evaluate_testset()
+print "Health risk for the given dataset:%{}" .format(ratio)
 
 
 # ## Learning from examples (10 P)
@@ -135,7 +137,7 @@ evaluate_testset()
 # 
 # * Write a procedure that reads this file and converts it into a list of pairs. The first element of each pair is a triplet of attributes, and the second element is the label.
 
-# In[256]:
+# In[8]:
 
 def gettrain():
     # >>>>> YOUR CODE HERE
@@ -145,31 +147,26 @@ def gettrain():
         line_counter = 0
         
         for line in ftrain:
-            print line
             line_counter = line_counter +1
             T.extend([x for x in str.split(line[:-1], ',')])
             
-        dataList = list()
-        labelList = list()
+        dataList = []
+        labelList = []
         
         for i in range(line_counter * 4):
             if (i+1)%4 ==0:
                 labelList.append(T[i])
             else:
                 dataList.append(T[i])
-        
-        print 'dataList:{}\n'.format(dataList)
-        print 'labelList:{}' .format(labelList)
-        
-        
-        
             
         if ftrain == 0:
             raise NotImplementedError("Inconvenient type of data")
+    return dataList, labelList
+
     # <<<<< END YOUR CODE
 
 
-# In[257]:
+# In[9]:
 
 gettrain()
 
@@ -185,33 +182,98 @@ gettrain()
 # * Write a function that retrieves for a test point the nearest neighbor in the training set, and classifies the test point accordingly.
 # * Test your function on the tuple `('yes', 31, 'good')`
 
-# In[ ]:
+# In[10]:
 
 def neighbor(x, trainset):
-    # >>>>> YOUR CODE HERE
-    raise NotImplementedError("Replace this line by your code.")
+
+    smoker = []
+    age = []
+    diet = []
+    distances = []
+    result = []
+
+    for i in xrange(len(trainset)):
+        
+        if (i+1)%3 == 1:
+            smoker.append(trainset[i])
+            age.append(trainset[i+1])
+            diet.append(trainset[i+2])
+            
+        for j in xrange(len(smoker)):   
+            distance = int(bool((x[0])!=(smoker[j]))) + (abs(int(x[1]) - int(age[j])) / 50.0)**2 + int(bool((x[2])!=(diet[j])))
+        distances.append(distance)
+        dist=[]
+        
+        for k in distances:
+            if k not in dist:
+                dist.append(k)
+    
+#     print 'smoker:', smoker
+#     print 'age:' , age
+#     print 'diet:', diet
+#     print 'list of distances:', dist 
+
+    avg = sum(dist)/len(dist)
+    
+    for m in xrange(len(dist)):
+      
+        
+        if dist[m] < avg:
+            predict = 'more'
+            result.append(predict)
+        else:
+            predict = 'less'
+            result.append(predict)
+    return result
+
+    if trainset == 0:
+        raise NotImplementedError("No training data is available.")
+
+    
+    
     # <<<<< END YOUR CODE
 
 
-# In[ ]:
+# In[11]:
 
 # Test
+lData, lLabel = gettrain()
+print neighbor(x, lData)[0]
 x = ('yes', 31, 'good')
-assert neighbor(x, gettrain()) == "more"
+assert neighbor(x, lData)[0] == "more"
 
 
 # * Apply both the decision tree and nearest neighbor classifiers on the test set, and find the data point(s) for which the two classifiers disagree, and with which probability it happens.
 
-# In[ ]:
+# In[48]:
 
 def compare():
     # >>>>> YOUR CODE HERE
-    raise NotImplementedError("Replace this line by your code.")
+    DT = []
+    NN = []
+    DT.append(evaluate_testset()[0])
+    NN.append(neighbor(x, lData)[:8])
+    Xdisagree = 0
+    print 'Results with Decision Tree', DT[0]
+    print 'Results with Nearest Neighbour', NN[0]
+    c = 0
+    
+    for c in xrange(len(DT[0])):
+        if DT[0][c] != NN[0][c]:
+            Xdisagree += 1
+    probability = (float(Xdisagree) / len(DT[0]))   
+    print 'Probability of a disagree: {}'.format(probability)
+    print 'Disagree on {} points.'.format(Xdisagree)
+   
+    if ( DT == 0 or NN == 0):
+        raise NotImplementedError("Could not fetch proper result from one of the functions.")
+    
+    
     # <<<<< END YOUR CODE
     return Xdisagree, probability
 
 
-# In[ ]:
+# In[49]:
 
 Xdisagree, probability = compare()
 assert type(Xdisagree) == list
