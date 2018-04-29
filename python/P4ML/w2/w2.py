@@ -157,8 +157,8 @@ def benchmark_numpy(n):
 
 # In[128]:
 
-num_dimensions=100
-benchmark_python(num_dimensions), benchmark_numpy(num_dimensions)
+size=100
+benchmark_python(size), benchmark_numpy(size)
 
 
 # In[129]:
@@ -218,9 +218,115 @@ plt.ylabel('time [s]')
 plt.legend(loc='lower right')
 
 
-# In[ ]:
+# In[152]:
+
+A = numpy.zeros((3, 3)) # array of size 2x2 filled with zeros
+A3 = numpy.zeros((3, 3, 3)) # array of size 2x2 filled with zeros
+B = numpy.ones((3, 3)) # same, but filled with ones
+C = numpy.diag((1.0, 2.0, 3.0)) # diagonal matrix
+D = numpy.eye(3) # identity matrix
+E = numpy.random.rand(3, 3) # random numbers
+F = numpy.triu(B) # upper triagonal matrix
 
 
+# In[153]:
+
+print C
+
+
+# In[156]:
+
+A3.shape
+
+
+# In[157]:
+
+from sklearn.datasets import load_boston
+
+
+# In[158]:
+
+boston = load_boston()
+
+
+# In[162]:
+
+print boston.keys()
+
+
+# In[208]:
+
+D = boston['data']
+F = boston['feature_names']
+
+
+# In[209]:
+
+print D
+print F
+
+
+# In[210]:
+
+print(D[:,0].mean())
+print(D[:,0])
+
+
+# In[211]:
+
+(zip(F, D.mean(axis=0), D.std(axis=0))) #creating list
+
+
+# In[212]:
+
+D = D[:, [5, 12]]
+plt.figure(figsize=(6,6))
+plt.plot(D[:, 0], D[:, 1], 'o', color='black', ms=3)
+plt.plot(D[:, 0].mean(), D[:, 1].mean(), 'o', color='red', ms=10)
+
+
+# In[202]:
+
+D_norm = D - D.mean(axis=0) # center around origin
+D_norm /= D.std(axis=0) # rescale features
+
+
+# In[213]:
+
+import scipy
+import scipy.spatial
+
+
+# In[214]:
+
+S = scipy.spatial.distance.cdist(D_norm, D_norm)
+
+
+# In[215]:
+
+print S
+
+
+# In[218]:
+
+plt.figure(figsize=(6, 6))
+ind = numpy.where(S < 0.2)
+
+
+# In[220]:
+
+plt.plot(D_norm[:, 0], D_norm[:, 1], 'o', color='black', ms=3)
+
+
+# In[233]:
+
+for i1,i2 in zip(*ind):
+    plt.plot([D_norm[i1, 0], D_norm[i2, 0]], [D_norm[i1, 1], D_norm[i2, 1]], color='red')
+
+
+# In[231]:
+
+help(numpy.where)
 
 
 # In[ ]:
