@@ -1,4 +1,5 @@
 // a try out: Java
+
 public class h1 {
 
     public static void main(String[] args) {
@@ -24,6 +25,7 @@ public class h1 {
 	else{
 		System.out.println("dere boyu kavaklar");
 	}
+
 
     }
 
