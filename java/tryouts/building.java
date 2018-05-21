@@ -1,4 +1,4 @@
-public class building{
+class building{
     public static void main(String arg){
         //some prop
         String region;
@@ -7,12 +7,12 @@ public class building{
         int avgRent;
 
         //some method
-    public static void build(){
-        string projectName;
-        int projectDuration;
-        int workerCount;
-        double avgSalary;
+    // public static void build(){
+    //     string projectName;
+    //     int projectDuration;
+    //     int workerCount;
+    //     double avgSalary;
 
-        }
+        // }
     } 
 }
