@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">myDemo</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="convert">Convert</string>
+    <string name="converter_activity">Converter Activity</string>
+    <string name="enter_amount_in_dollars">Enter amount in dollars.</string>
+    <string name="todo">TODO</string>
+    <string name="nombre">Nombre</string>
+    <string name="mellamo">MeLlamo</string>
+    <string name="como_te_llamas">Como te llamas?</string>
+    <string name="converter">Converter</string>
+    <string name="mundoDesc">TODO</string>
+    <string name="caballos">caballos</string>
+    <string name="dinero">dinero</string>
 </resources>

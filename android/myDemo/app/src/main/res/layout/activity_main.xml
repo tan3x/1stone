@@ -15,7 +15,7 @@
         android:layout_marginRight="24dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="36dp"
-        android:text="Como te llamas?"
+        android:text="@string/como_te_llamas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="Nombre"
+        android:hint="@string/nombre"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -42,33 +42,57 @@
         android:id="@+id/buttonID"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginBottom="292dp"
         android:layout_marginEnd="142dp"
         android:layout_marginLeft="142dp"
         android:layout_marginRight="142dp"
         android:layout_marginStart="142dp"
         android:onClick="buttonMeLlamoClick"
-        android:text="MeLlamo"
+        android:text="@string/mellamo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/mundoID"
         android:layout_width="74dp"
         android:layout_height="71dp"
-        app:srcCompat="@drawable/munnndo"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginEnd="14dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/mundoDesc"
+        app:layout_constraintEnd_toStartOf="@+id/comoEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/munnndo" />
 
     <ImageView
         android:id="@+id/caballoID"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/caballos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonID"
+        app:srcCompat="@drawable/caballo" />
+
+    <Button
+        android:id="@+id/converterButtonID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonID"
-        app:srcCompat="@drawable/caballo"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:onClick="converterButton"
+        android:text="@string/converter"
+        app:layout_constraintBottom_toTopOf="@+id/caballoID"
+        app:layout_constraintEnd_toStartOf="@+id/buttonID"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
