@@ -1,2 +1,1 @@
-# cs50
-Problem sets exercised with C
+# Problem sets exercised with Harvard CS50 course.
