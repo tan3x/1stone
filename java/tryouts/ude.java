@@ -8,7 +8,7 @@ public class ude{
         String aSurname = "isaRabel";
         int aFav = 5;
         double aDouble = 10.55;
-        float aFloat= (float)1.5;
+        float aFloat= (float) 10;
         boolean isNumber = true;
 
         System.out.println(aName+ "was here" + "sum of some numbers" +aFav+aFloat+aDouble);
@@ -19,11 +19,33 @@ public class ude{
 
         System.out.println(numbers[1]);
 
-        List<int> myList = new ArrayList<int>();
 
-        myList.add(2);
-        myList.add(3);
+        List<Integer> myNumbers = new ArrayList<>();
+        List<String> myCountries = new ArrayList<>();
 
-//        System.out.println(myList(0));
+        Map myMap = new java.util.HashMap<>();
+
+
+
+        myMap.put("Jack", "Russell");
+        myMap.put("Beck", "Crowe");
+        myMap.remove("Beck");
+
+        System.out.println(myMap.size());
+
+
+        myNumbers.add(2);
+        myNumbers.add(3);
+        myNumbers.remove(0);
+
+        myCountries.add("Cambodia");
+        myCountries.add("Mozambique");
+//        myCountries.remove(0);
+
+        System.out.println(myCountries);
+        System.out.println(myNumbers.get(0));
+        System.out.println(myCountries);
+        System.out.println(myCountries.toString());
+
     }
 }

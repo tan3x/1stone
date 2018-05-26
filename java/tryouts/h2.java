@@ -12,10 +12,10 @@ public class h2{
         Scanner input = new Scanner(System.in);
         String st1="Veridis";
 
-        int leng=st1.length();
         System.out.println(leng);
+        int leng=st1.length();
         int i;
-        
+
         if(st1.equals("Veridis")) {
             System.out.println("");
             System.out.println("Veridis.");
