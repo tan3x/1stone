@@ -19,7 +19,7 @@ public class h1 {
 	System.out.println("loreum ihusaa " + a + maxInt +muchMore + fraction );
 	System.out.println(someText + "     " + someChar + fact);
 
-	if(isRaining){
+	if(isRaining
 		System.out.println("pajaro libre\n");
 	}
 	else{
