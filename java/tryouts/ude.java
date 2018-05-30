@@ -8,6 +8,7 @@ public class ude{
         String aSurname = "isaRabel";
         int aFav = 5;
         double aDouble = 10.55;
+
         float aFloat= (float) 10;
         boolean isNumber = true;
 
