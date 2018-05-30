@@ -40,14 +40,31 @@ public class MainActivity extends AppCompatActivity {
         String message = nombreEditText.getText().toString();
 
         intent.putExtra(EXTRA_MESSAGE, message);
+
         startActivity(intent);
-
-
-
 
     }
 
-    @Override
+    //      Creates 3rd activity with the Animation button
+
+    public void clickAnimation(View viewAnimation) {
+
+        Log.i("test", "animation activity");
+        Intent intent2 = new Intent(this, animationActivity.class);
+        EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
+
+        String messageAnimation = nombreEditText.getText().toString();
+
+        String message = nombreEditText.getText().toString();
+
+
+        intent2.putExtra(EXTRA_MESSAGE, messageAnimation);
+
+        startActivity(intent2);
+    }
+
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
