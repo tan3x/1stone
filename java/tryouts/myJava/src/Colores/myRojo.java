@@ -1,4 +1,4 @@
-package myPackage;
+package Colores;
 
 /**
  * Created by tanermetin on 30.05.18.
