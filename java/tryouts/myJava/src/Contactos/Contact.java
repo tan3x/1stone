@@ -2,10 +2,11 @@ package Contactos;
 
 public class Contact {
 
-    String name;
-    String email;
-    String language;
-    String phone;
+    public String name;
+    public String email;
+    public String language;
+    public String phone;
+    public String genero;
 
 }
 
