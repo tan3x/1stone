@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class animationActivity extends AppCompatActivity {
 
-    public static final String  EXTRA_MESSAGE = "com.example.tanermetin.mydemo.MESSAGE";
 
 
 //      Creates 3rd activity with the Animation button
@@ -19,16 +18,13 @@ public class animationActivity extends AppCompatActivity {
 
         Log.i("test", "animation activity");
 
-        Intent intent2 = new Intent(this, DisplayMessageActivity.class);
-
-        EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
-
-        String messageAnimation = nombreEditText.getText().toString();
-
-        String message =  nombreEditText.getText().toString();
+//        EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
+//
+//        String messageAnimation = nombreEditText.getText().toString();
+//
+//        String message =  nombreEditText.getText().toString();
 
 
-        intent2.putExtra(EXTRA_MESSAGE, messageAnimation);
 
     }
 
@@ -37,8 +33,7 @@ public class animationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animation);
 
-
-//        gets the intent that started and extracts the string
+//      Gets the intent that started and extracts the string
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
@@ -47,10 +42,6 @@ public class animationActivity extends AppCompatActivity {
         textView.setText(message);
 
     }
-
-
-
-
 
 
 }

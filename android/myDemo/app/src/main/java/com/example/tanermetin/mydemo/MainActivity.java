@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("test","button converter clicked");
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
+
         EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
         String message = nombreEditText.getText().toString();
 
@@ -50,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
     public void clickAnimation(View viewAnimation) {
 
         Log.i("test", "animation activity");
+
         Intent intent2 = new Intent(this, animationActivity.class);
+
         EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
-
         String messageAnimation = nombreEditText.getText().toString();
-
         String message = nombreEditText.getText().toString();
 
 
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent2);
     }
+
 
 
         @Override
