@@ -21,7 +21,7 @@ public class HttpClient {
 
 //        request to HTTP server:
 
-        out.println("GET /index.html HTTP/1.0");
+        out.println("GET /basics.html HTTP/1.0");
         out.println(); // empty line to seperate header and body
         out.flush();
 
