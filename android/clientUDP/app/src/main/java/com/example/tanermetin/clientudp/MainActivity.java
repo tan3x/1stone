@@ -14,13 +14,15 @@ import java.net.InetAddress;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText textMessage ;
+    EditText ipAddress;
+    EditText portUDP;
     Button buttonSend;
     TextView replyMessage;
 
     byte [] buffer = new byte[512];
 
-    public static final String IP_ADDRESS = "194.95.175.180";
-    public static final int UDP_PORT = 9876;
+//    public static final String IP_ADDRESS = "194.95.175.180";
+//    public static final int UDP_PORT = 9876;
 
 
     @Override
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         textMessage = (EditText) findViewById(R.id.EditTextMessage);
+        ipAddress = (EditText) findViewById(R.id.EditTextIP);
+        portUDP = (EditText) findViewById(R.id.EditTextPortUDP);
         Button buttonSend = (Button) findViewById(R.id.ButtonSend);
         buttonSend.setOnClickListener(this);
     }
@@ -53,22 +57,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 DatagramPacket packet;
 
                 try {
-                    InetAddress serverAddress = InetAddress.getByName(IP_ADDRESS);
+//                    InetAddress serverAddress = InetAddress.getByName(IP_ADDRESS);
+                    InetAddress serverAddress = InetAddress.getByName(ipAddress.getText().toString());
+                    int portUdp = Integer.parseInt(portUDP.getText().toString());
 
                     socket = new DatagramSocket();
-                    packet = new DatagramPacket(message.getBytes(), message.length(),serverAddress, UDP_PORT );
+                    packet = new DatagramPacket(message.getBytes(), message.length(),serverAddress, portUdp );
                     socket.send(packet);
 
                 } catch (IOException e){
                     e.printStackTrace();
-                }finally{
+
+                } finally{
                     if(socket != null){
                         socket.close();
                     }
                 }
             }
         });
-
     sendThread.start();
     }
 }

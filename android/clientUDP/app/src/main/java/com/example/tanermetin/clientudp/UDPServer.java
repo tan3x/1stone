@@ -21,9 +21,11 @@ class UDPServer
 
             String sentence = new String( receivePacket.getData());
 
-            System.out.println("RECEIVED: " + sentence);
-
             InetAddress IPAddress = receivePacket.getAddress();
+
+            System.out.println("RECEIVED: " + sentence);
+            System.out.println("FROM: " + IPAddress);
+
             int port = receivePacket.getPort();
 
             String capitalizedSentence = sentence.toUpperCase();
