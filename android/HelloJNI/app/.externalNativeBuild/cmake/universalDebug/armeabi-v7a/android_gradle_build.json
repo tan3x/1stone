@@ -1,0 +1,38 @@
+
+{
+	"buildFiles" : [ "/opt/1stone/android/HelloJNI/app/src/main/cpp/CMakeLists.txt" ],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/tanermetin/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /opt/1stone/android/HelloJNI/app/.externalNativeBuild/cmake/universalDebug/armeabi-v7a --target clean"
+	],
+	"libraries" : 
+	{
+		"hello-jni-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "hello-jni",
+			"buildCommand" : "/Users/tanermetin/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /opt/1stone/android/HelloJNI/app/.externalNativeBuild/cmake/universalDebug/armeabi-v7a --target hello-jni",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/tanermetin/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/tanermetin/Library/Android/sdk/ndk-bundle/sysroot -Dhello_jni_EXPORTS  -isystem /Users/tanermetin/Library/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/opt/1stone/android/HelloJNI/app/src/main/cpp/hello-jni.c",
+					"workingDirectory" : "/opt/1stone/android/HelloJNI/app/.externalNativeBuild/cmake/universalDebug/armeabi-v7a"
+				}
+			],
+			"output" : "/opt/1stone/android/HelloJNI/app/build/intermediates/cmake/universal/debug/obj/armeabi-v7a/libhello-jni.so",
+			"toolchain" : "8687491377381397062"
+		}
+	},
+	"toolchains" : 
+	{
+		"8687491377381397062" : 
+		{
+			"cCompilerExecutable" : "/Users/tanermetin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/tanermetin/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

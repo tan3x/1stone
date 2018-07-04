@@ -21,10 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     byte [] buffer = new byte[512];
 
-//    public static final String IP_ADDRESS = "194.95.175.180";
-//    public static final int UDP_PORT = 9876;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonSend = (Button) findViewById(R.id.ButtonSend);
         buttonSend.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -57,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 DatagramPacket packet;
 
                 try {
-//                    InetAddress serverAddress = InetAddress.getByName(IP_ADDRESS);
                     InetAddress serverAddress = InetAddress.getByName(ipAddress.getText().toString());
                     int portUdp = Integer.parseInt(portUDP.getText().toString());
 
@@ -75,6 +71,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-    sendThread.start();
+        sendThread.start();
     }
 }
+
+
+
+

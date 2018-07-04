@@ -1,0 +1,3 @@
+/opt/1stone/android/HelloJNI/app/.externalNativeBuild/cmake/universalDebug/x86/CMakeFiles/edit_cache.dir
+/opt/1stone/android/HelloJNI/app/.externalNativeBuild/cmake/universalDebug/x86/CMakeFiles/rebuild_cache.dir
+/opt/1stone/android/HelloJNI/app/.externalNativeBuild/cmake/universalDebug/x86/CMakeFiles/hello-jni.dir
