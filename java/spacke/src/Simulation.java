@@ -17,8 +17,10 @@ public class Simulation {
 
     public Simulation(){}
 
-    public static void main(String [] args){
+    public static void main(String [] args)throws  IOException{
         Simulation mySim = new Simulation();
+        ArrayList<Item> myItems1 = mySim.loadPhase1Items();
+        ArrayList<Item> myItems2 = mySim.loadPhase2Items();
 
     }
 
