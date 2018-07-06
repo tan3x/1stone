@@ -1,7 +1,7 @@
-// single line comment
-/*
-multi line comment
-*/
+//single line comments
+/*multi line comemnts darling*/
 
-pacakge com.tanermetin.kotlin
 
+fun main(args: Array<String>){
+    println("ahoi anem")
+}

@@ -1,11 +1,13 @@
-/**
+package com.example.tanermetin.commudp_ndk; /**
  * Created by tanermetin on 19.06.18.
  */
-import java.io.*;
-import java.net.*;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 
 
-class UDPServer{
+class UDPServer {
 
     public static void main(String args[]) throws Exception
     {
