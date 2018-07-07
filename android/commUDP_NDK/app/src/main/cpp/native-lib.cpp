@@ -7,6 +7,6 @@ JNICALL
 Java_com_example_tanermetin_commudp_1ndk_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
-    std::string hello = "Hello from NDK C";
+    std::string hello = "Hello from NDK";
     return env->NewStringUTF(hello.c_str());
 }
