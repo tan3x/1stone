@@ -15,6 +15,15 @@ import java.net.InetAddress;
 
 public class MainActivity extends AppCompatActivity {
 
+    public native String hello();
+
+    static {
+        System.loadLibrary("ndktest");
+
+    }
+
+
+
     EditText textMessage ;
     EditText ipAddress;
     EditText portUDP;
@@ -43,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         portUDP = (EditText) findViewById(R.id.EditTextPortUDP);
         Button buttonSend = (Button) findViewById(R.id.ButtonSend);
 //        buttonSend.setOnClickListener(this);
+
+//        calling native function
+//        TextView()findViewById(R.id.helloNDK).setText(hello());
     }
 
 
