@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonSend.setOnClickListener(this);
     }
 
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
 
-                DatagramSocket socket = null;
+                DatagramSocket socket= null;
                 DatagramPacket packet;
 
                 try {
@@ -71,10 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-        sendThread.start();
+    sendThread.start();
     }
 }
-
-
-
-

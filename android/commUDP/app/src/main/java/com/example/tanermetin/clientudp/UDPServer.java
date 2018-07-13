@@ -1,26 +1,19 @@
+package com.example.tanermetin.clientudp;
+
 /**
  * Created by tanermetin on 19.06.18.
  */
 import java.io.*;
 import java.net.*;
 
-
-class UDPServer{
-
+class UDPServer
+{
     public static void main(String args[]) throws Exception
     {
-
-        int portUDP = 9876;
-
-        DatagramSocket serverSocket = new DatagramSocket(portUDP);
-
+        DatagramSocket serverSocket = new DatagramSocket(9876);
 
         byte[] receiveData = new byte[1024];
         byte[] sendData = new byte[1024];
-
-        System.out.println("LISTENING AT: " +  serverSocket.getLocalSocketAddress());
-
-
         while(true)
         {
 
