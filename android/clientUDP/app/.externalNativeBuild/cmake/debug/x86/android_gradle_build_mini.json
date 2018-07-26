@@ -1,9 +1,0 @@
-{
-  "buildFiles": [
-    "/opt/1stone/android/clientUDP/CMakeLists.txt"
-  ],
-  "cleanCommands": [
-    "/Users/tanermetin/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /opt/1stone/android/clientUDP/app/.externalNativeBuild/cmake/debug/x86 --target clean"
-  ],
-  "libraries": {}
-}
