@@ -1,0 +1,107 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ec2b58b5b5c6e2e13c6f5ae59c3a1f28/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4ff050d07afcf394eb14b463dab7a286/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/44778d6532fe33387ed8d45188bad8b4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/58f22ae8b34b3897919d1956ae0b0a80/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/30ca7dfd554e68c167d8e1943d26d702/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/8a1a82543fcaf7ef9fa90ae492cfe6be/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/42d8d4458c6ba5de2c3e0864bcedf2f7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ab130830b3e83bf2da044307bb0463c8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a5a115ffdd0a1bdf70552c9db639b5f0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/31f89494b88a2650b96f9464df629e94/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/d4ae77d82e83cf906c778df5e818abb1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/bd0605437f0c76d38d4e37de879af545/AndroidManifest.xml:17:1-22:12
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:3:5-47
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4ff050d07afcf394eb14b463dab7a286/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4ff050d07afcf394eb14b463dab7a286/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.tanermetin.clientudp.MainActivity
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:16:27-74
+uses-permission#android.permission.INTERNET
+ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:20:5-67
+	android:name
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml:20:22-64
+uses-sdk
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ec2b58b5b5c6e2e13c6f5ae59c3a1f28/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ec2b58b5b5c6e2e13c6f5ae59c3a1f28/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4ff050d07afcf394eb14b463dab7a286/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4ff050d07afcf394eb14b463dab7a286/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/44778d6532fe33387ed8d45188bad8b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/44778d6532fe33387ed8d45188bad8b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/58f22ae8b34b3897919d1956ae0b0a80/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/58f22ae8b34b3897919d1956ae0b0a80/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/30ca7dfd554e68c167d8e1943d26d702/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/30ca7dfd554e68c167d8e1943d26d702/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/8a1a82543fcaf7ef9fa90ae492cfe6be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/8a1a82543fcaf7ef9fa90ae492cfe6be/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/42d8d4458c6ba5de2c3e0864bcedf2f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/42d8d4458c6ba5de2c3e0864bcedf2f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ab130830b3e83bf2da044307bb0463c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ab130830b3e83bf2da044307bb0463c8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a5a115ffdd0a1bdf70552c9db639b5f0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a5a115ffdd0a1bdf70552c9db639b5f0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/31f89494b88a2650b96f9464df629e94/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/31f89494b88a2650b96f9464df629e94/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/d4ae77d82e83cf906c778df5e818abb1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/d4ae77d82e83cf906c778df5e818abb1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/bd0605437f0c76d38d4e37de879af545/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/tanermetin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/bd0605437f0c76d38d4e37de879af545/AndroidManifest.xml:20:5-44
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		ADDED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml
+		INJECTED from /opt/1stone/android/clientUDP/app/src/main/AndroidManifest.xml

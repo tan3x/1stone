@@ -8,6 +8,7 @@ import android.view.Display;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
@@ -15,7 +16,7 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class MainActivity extends AppCompatActivity {
 
     public static final String  EXTRA_MESSAGE = "com.example.tanermetin.mydemo.MESSAGE";
-
+    public static final String  SEASON="";
 
     public void buttonMeLlamoClick(View view){
         EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//      Creates 2nd activity when the converter button is pressed.
+//      Switches 2nd activity when the converter button is pressed.
     public void converterButton(View view2){
         Log.i("test","button converter clicked");
 
@@ -43,28 +44,25 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
 
         startActivity(intent);
-
     }
 
-    //      Creates 3rd activity with the Animation button
+    public void clickWeather(View view){
+        Toast.makeText(this, "weather was clicked", Toast.LENGTH_SHORT).show();
+        Log.i("test","weather button clicked");
 
-    public void clickAnimation(View viewAnimation) {
+        Intent weatherIntent = new Intent(this, WeatherActivity.class);
 
-        Log.i("test", "animation activity");
-
-        Intent intent2 = new Intent(this, animationActivity.class);
-
-        EditText nombreEditText = (EditText) findViewById(R.id.nombreEditText);
-        String messageAnimation = nombreEditText.getText().toString();
-        String message = nombreEditText.getText().toString();
+        EditText weatherText = (EditText) findViewById(R.id.EditTextSeason);
 
 
-        intent2.putExtra(EXTRA_MESSAGE, messageAnimation);
+        String season = weatherText.getText().toString();
 
-        startActivity(intent2);
+
+        weatherIntent.putExtra(SEASON, season);
+
+        startActivity(weatherIntent);
+
     }
-
-
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {

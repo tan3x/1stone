@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/EditTextSeason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Season"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comoEditText" />
+
     <TextView
         android:id="@+id/comoEditText"
         android:layout_width="256dp"
@@ -26,10 +43,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
@@ -98,8 +115,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:onClick="clickAnimation"
-        android:text="ANIMATION"
+        android:onClick="clickWeather"
+        android:text="WEATHER"
         app:layout_constraintBottom_toTopOf="@+id/caballoID"
         app:layout_constraintStart_toEndOf="@+id/buttonID" />
 

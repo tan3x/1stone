@@ -1,0 +1,2 @@
+/opt/1stone/android/clientUDP/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+/opt/1stone/android/clientUDP/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir

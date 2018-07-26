@@ -23,14 +23,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+<<<<<<< Updated upstream
 
     EditText textMessage ;
+=======
+    EditText textMessage;
+>>>>>>> Stashed changes
     EditText ipAddress;
     EditText portUDP;
     Button buttonSend;
     TextView replyMessage;
 
-    byte [] buffer  = new byte[512];
+    byte[] buffer = new byte[512];
 
 
     // Used to load the 'native-lib' library on application startup.
@@ -51,7 +55,18 @@ public class MainActivity extends AppCompatActivity {
         ipAddress = (EditText) findViewById(R.id.EditTextIP);
         portUDP = (EditText) findViewById(R.id.EditTextPortUDP);
         Button buttonSend = (Button) findViewById(R.id.ButtonSend);
+<<<<<<< Updated upstream
 //        buttonSend.setOnClickListener(this);
+=======
+
+        buttonSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
+>>>>>>> Stashed changes
 
 //        calling native function
 //        TextView()findViewById(R.id.helloNDK).setText(hello());
@@ -59,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.ButtonSend:
                 sendMessage(textMessage.getText().toString());
         }
     }
 
-    private void sendMessage(final String message){
+    private void sendMessage(final String message) {
         final Handler handler = new Handler();
         Thread sendThread = new Thread(new Runnable() {
 
@@ -82,14 +97,14 @@ public class MainActivity extends AppCompatActivity {
                     int portUdp = Integer.parseInt(portUDP.getText().toString());
 
                     socket = new DatagramSocket();
-                    packet = new DatagramPacket(message.getBytes(), message.length(),serverAddress, portUdp );
+                    packet = new DatagramPacket(message.getBytes(), message.length(), serverAddress, portUdp);
                     socket.send(packet);
 
-                } catch (IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
 
-                } finally{
-                    if(socket != null){
+                } finally {
+                    if (socket != null) {
                         socket.close();
                     }
                 }
